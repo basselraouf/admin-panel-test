@@ -31,6 +31,7 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Users imported successfully.');
 
         }catch(\Exception $e){
+            dd($e->getMessage());
             return redirect()->back()->with('error', 'Error importing users: ' . $e->getMessage());
         }
     }

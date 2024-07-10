@@ -16,6 +16,7 @@ class UsersImport implements ToModel, WithHeadingRow, WithValidation
     */
     public function model(array $row)
     {
+
         // dd($row);
         return new User([
             'full_name' => $row['name'],
@@ -25,10 +26,11 @@ class UsersImport implements ToModel, WithHeadingRow, WithValidation
     }
     public function rules(): array
     {
+
         return [
-            'full_name' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'phone_number' => 'required|string|max:20',
+            'telephone_number' => 'required|integer',
         ];
     }
 }

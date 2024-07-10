@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: NobleUI - HTML Bootstrap 5 Admin Dashboard Template
-Author: NobleUI
-Website: https://www.nobleui.com
-Portfolio: https://themeforest.net/user/nobleui/portfolio
-Contact: nobleui123@gmail.com
-Purchase: https://1.envato.market/nobleui_admin
-License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
--->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -19,8 +10,6 @@ License: For each use you must have a valid license purchased only from above li
 
 	<title>NobleUI - HTML Bootstrap 5 Admin Dashboard Template</title>
 
-    <!-- Include DataTables CSS from CDN -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +35,16 @@ License: For each use you must have a valid license purchased only from above li
   <!-- End layout styles -->
 
   <link rel="shortcut icon" href="../assets/images/favicon.png" />
+
+  <!-- Include DataTables CSS from CDN -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+
+    <style>
+        table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date, table.dataTable td.dt-type-numeric, table.dataTable td.dt-type-date
+        {
+            text-align: unset !important;
+        }
+        </style>
 </head>
 <body>
 	<div class="main-wrapper">
@@ -658,7 +657,7 @@ License: For each use you must have a valid license purchased only from above li
                 <tr>
                     <th>id</th>
                     <th>Full name</th>
-                    <th>Email</th>
+                    <th style='width:30%'>Email</th>
                     <th>Phone Number</th>
                 </tr>
             </thead>
